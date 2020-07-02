@@ -1,0 +1,241 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta content="telephone=no" name="format-detection">
+		<title>头痛调理方案新突破</title>
+		<link href="./css/style.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<div id="all-boss">
+			<header class="ly-header">
+				<div class="hd_top">
+					<div class='bznavdh'>
+						<ul>
+							<li class='nav1_0'><a href='javascript:;'><span>首页</span></a></li>
+							<li class='nav1_1'><a href='javascript:;'><span>新闻动态</span></a></li>
+							<li class='nav1_7'><a href='javascript:;'><span>联系我们</span></a></li>
+							<li class='nav1_2'><a href='javascript:;'><span>关于我们</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</header>
+
+			<section class="ly-section1">
+				<div class="talk" id="messbox">
+					<div align="center"><img style="width:100%" align="center" src="./images/p1.png"></div>
+					<div id="thumb"></div>
+				</div>
+			</section>
+			
+			<div class="select_botton" style="display:none;" id="option_3">
+				<a href="javascript:" class="btn" data-ai="1" wtindex="3">一年以上</a>
+				<a href="javascript:" class="btn" data-ai="1" wtindex="3">一年以下</a>
+			</div>
+			<div class="select_botton" style="display:none;" id="option_4">
+				<a href="javascript:" class="btn" data-ai="1" wtindex="4" style="width: 45%;">是</a>
+				<a href="javascript:" class="btn" data-ai="2" wtindex="4" style="width: 45%;">否</a>
+			</div>
+			<div class="select_botton" style="display:none;" id="option_5">
+				<a href="javascript:" class="btn" wtindex="5" style="width: 45%;">加微信</a>
+				<a href="javascript:" class="btn" wtindex="5" style="width: 45%;">获取方案</a>
+			</div>
+			<p style="color: #999;text-align: center;margin-top: 89px;"></p>
+		</div>
+		<div class="foot_fixed btn-op">
+			<p>直接点击此处加微信咨询</p>
+		</div>
+
+		<div class="modal" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div id="cont-txt">
+						<div class="txtmain">
+							<div id="closepop">X</div>
+							<p class="txtsub">——99.1%网友推荐——</p>
+							<p class="wxh">长按复制微信 <span class="wxs" id="getweixin">
+									
+								</span></p>
+							<p class="txtsub btns gowx"><span id="goWxs"><a href="weixin://">打开微信</a></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script>
+			$('.btn-op').click(function() {
+				$('#myModal').slideDown();
+				$("#wxTxt1").text('zlzlzll');
+			});
+			$('#closepop').click(function() {
+				$('#myModal').slideUp();
+			});
+
+			!(function() {
+				var img_height = $('#img').offset().top;
+				$("html,body").animate({
+					scrollTop: (img_height - 42)
+				}, 500);
+				console.log(img_height);
+			}());
+		</script>
+		<script>
+			$(function() {
+				var warr = [];
+				var loadstr = '<div class="loading">连线中  <span></span><span></span><span></span><span></span><span></span></div>';
+				var str1 =
+					'<div class="line ly-hide" ><div class="left"><img src="./images/222.jpg" width="40px"><div> <i></i>您好，系统已为您匹配<span style="color: red"></span>专业解疑老师，<span style="color: red">一对一为您服务</span></div></div><div class="ly-clear"></div></div>';
+
+				var str2_a =
+					'<div class="line ly-hide" style="display: block;" id="fp"><div class="left"> <img src="./images/222.jpg" width="40px"><div id="lx">您好，很高兴为您服务！！</div></div><div class="ly-clear"></div></div>';
+
+				var str2 =
+					'<div class="line ly-hide" style="display: block;" id="fp"><div class="left"> <img src="./images/222.jpg" width="40px"><div id="lx"><i></i>您好，北京汉方本草国际中医药研究院头痛防治管理中心，<span style="color: red">解决头痛问题，找准病因对症治疗是关键。专业中医研发团队</span>，古方新创，让您不花冤枉钱，彻底解决头痛困扰。请问，您的性别是？<b style="color: red;">【点击下方选项即可】</b></div></div>'+
+					'<div class="select_botton" id="option_2">'+
+								'<div class="select_botton_item" data-ai="1" wtindex="3">男性</div>'+
+								'<div class="select_botton_item" data-ai="1" wtindex="3">女性</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div><div id="msg"></div>';
+
+				warr[1] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>您的年龄是？</div></div><div class="ly-clear"></div></div>';
+
+				warr[2] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>出现这个情况多久了？</div></div><div class="ly-clear"></div></div>';
+				warr[3] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>是否检查治疗过？</div></div><div class="ly-clear"></div></div>';
+
+				warr[4] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div><p style="background:#006634;color:#fff;padding: 5px;font-size: 1.1em;">前列腺炎不仅让人饱受折磨与痛苦，丧失生活和工作激情，严重者丧失性功能甚至影响家庭。如果拖延，只会加重病情，还会导致肾炎、尿毒症等后果。选择有针对性的诊疗方案，<span style="color: red"></span>即可轻松调理！</p></div></div><div class="ly-clear"></div></div>' +
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> 这个方案科学对症，效果好，在家即可轻松调理！（长按复制加老师微信）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
+					 + '</span> 获取专属调理办法！</div></div><div class="ly-clear"></div></div>';
+				warr[8] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div><p style="background:#006634;color:#fff;padding: 5px;font-size: 1.1em;">前列腺炎不仅让人饱受折磨与痛苦，丧失生活和工作激情，严重者丧失性功能甚至影响家庭。如果拖延，只会加重病情，还会导致肾炎、尿毒症等后果。选择有针对性的诊疗方案，<span style="color: red"></span>即可轻松调理！</p></div></div><div class="ly-clear"></div></div>' +
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> 这个方案科学对症，效果好，在家即可轻松调理！（长按复制加老师微信）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
+					 + '</span> 获取合理调理办法！</div></div><div class="ly-clear"></div></div>';
+				warr[5] =
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div>添加老师微信（长按复制）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
+					 + '</span>，免费获取专属调理办法</div></div><div class="ly-clear"></div></div>';
+				setTimeout(function() {
+					$('.ly-section1 .line:first')["fadeIn"](100)
+				}, 300);
+				setTimeout(function() {
+					$('.ly-section1 .line_zizhi')["fadeIn"](100)
+				}, 600);
+				setTimeout(function() {
+					$("#messbox")["append"](loadstr)
+				}, 1000);
+				setTimeout(function() {
+					$(".loading")["fadeOut"](0);
+					$(".ly-section1")["css"]('display', 'block')
+				}, 400);
+
+				setTimeout(function() {
+					$(".loading")["fadeOut"](0);
+					$(".line")["css"]('display', 'block')
+				}, 3000);
+				setTimeout(function() {
+					$("#messbox")["append"](str1);
+					//window["scrollTo"](0, window["document"]["body"]["scrollHeight"])
+				}, 1500);
+
+				setTimeout(function() {
+					$("#messbox")["append"](str2_a);
+					window["scrollTo"](0, window["document"]["body"]["scrollHeight"])
+				}, 3500);
+
+				setTimeout(function() {
+					$("#messbox")["append"](str2);
+					window["scrollTo"](0, window["document"]["body"]["scrollHeight"])
+					$('#option_2').show();
+				}, 4000);
+
+				$(document).on("click",'.select_botton .select_botton_item',function(e){
+					e.target.style.backgroundColor='#3ab6d9';
+					$(this).css("pointer-events","none");
+					$(this).siblings().css("pointer-events","none");
+					var p_ai = $(this).attr('data-ai');
+					var p_value = $(this).text();
+					var wtindex = $(this).attr('wtindex');
+					var index = $(this).attr('index');
+					$("#msg").append(pj_html(p_value));
+					console.log(p_ai);
+					window.scrollTo(0, document.body.scrollHeight);
+					// 第一个答案
+					setTimeout(function() {
+						if (wtindex < (warr.length - 1)) {
+							if (wtindex == 4) {
+								addHtml(warr[wtindex * p_ai], 1000);
+							} else {
+								addHtml(warr[wtindex], 1000);
+							}
+							wtindex++;
+							setTimeout(function() {
+								$("#option_" + wtindex).fadeIn(400)
+							}, 1000);
+						} else {
+							addHtml(warr[wtindex], 1000);
+							$("#block-box").hide();
+						}
+					}, 800);
+					
+				});
+
+				function pj_html(str) {
+					var pzixun = '<div class="line"><div class="right"> <img src="./images/timg.jpg" width="40px"><div><i></i> ' + str +
+						'</div></div><div class="ly-clear"></div></div>';
+					return pzixun
+				}
+
+				function addHtml(S4, KdIHmU5) {
+					KdIHmU5 = KdIHmU5 || 5000;
+					setTimeout(function() {
+						$("#msg")["append"](S4);
+						if ($("#msg").find("#wx").size()) {
+							$("#msg").find("#wx").text(mess2);
+						};
+						if ($("#msg").find("#wx1").size()) {
+							$("#msg").find("#wx1").text(mess2);
+						}
+						window["scrollTo"](0, window["document"]["body"]["scrollHeight"])
+					}, KdIHmU5)
+				}
+
+
+
+			})
+
+			$(function() {
+				var oComment = $(".mm-comment");
+				oComment.on("click", ".m-discussPraise", function() {
+					var _this = $(this);
+					var oIcon = _this.find(".icon-praise");
+					var oTotal = _this.find("span:last");
+					var total = Number(oTotal.text());
+
+					if (oIcon.hasClass("active")) {
+						oIcon.removeClass("active");
+						total--;
+					} else {
+						oIcon.addClass("active");
+						total++;
+					}
+					oTotal.text(total);
+				});
+			});
+		</script>
+		<!--统计-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?e21b5b360700b6bc8597c84f7c52edf7";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</body>
+</html>
