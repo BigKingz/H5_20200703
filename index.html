@@ -24,23 +24,11 @@
 
 			<section class="ly-section1">
 				<div class="talk" id="messbox">
-					<div align="center"><img style="width:100%" align="center" src="./images/p1.png"></div>
+					<div align="center" id="img"><img style="width:100%" align="center" src="./images/p1.png"></div>
 					<div id="thumb"></div>
 				</div>
 			</section>
 			
-			<div class="select_botton" style="display:none;" id="option_3">
-				<a href="javascript:" class="btn" data-ai="1" wtindex="3">一年以上</a>
-				<a href="javascript:" class="btn" data-ai="1" wtindex="3">一年以下</a>
-			</div>
-			<div class="select_botton" style="display:none;" id="option_4">
-				<a href="javascript:" class="btn" data-ai="1" wtindex="4" style="width: 45%;">是</a>
-				<a href="javascript:" class="btn" data-ai="2" wtindex="4" style="width: 45%;">否</a>
-			</div>
-			<div class="select_botton" style="display:none;" id="option_5">
-				<a href="javascript:" class="btn" wtindex="5" style="width: 45%;">加微信</a>
-				<a href="javascript:" class="btn" wtindex="5" style="width: 45%;">获取方案</a>
-			</div>
 			<p style="color: #999;text-align: center;margin-top: 89px;"></p>
 		</div>
 		<div class="foot_fixed btn-op">
@@ -52,11 +40,9 @@
 				<div class="modal-content">
 					<div id="cont-txt">
 						<div class="txtmain">
-							<div id="closepop">X</div>
+							<div id="closepop">x</div>
 							<p class="txtsub">——99.1%网友推荐——</p>
-							<p class="wxh">长按复制微信 <span class="wxs" id="getweixin">
-									
-								</span></p>
+							<p class="wxh">长按复制微信<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">xwy7655</span></p>
 							<p class="txtsub btns gowx"><span id="goWxs"><a href="weixin://">打开微信</a></span></p>
 						</div>
 					</div>
@@ -68,7 +54,6 @@
 		<script>
 			$('.btn-op').click(function() {
 				$('#myModal').slideDown();
-				$("#wxTxt1").text('zlzlzll');
 			});
 			$('#closepop').click(function() {
 				$('#myModal').slideUp();
@@ -94,31 +79,62 @@
 
 				var str2 =
 					'<div class="line ly-hide" style="display: block;" id="fp"><div class="left"> <img src="./images/222.jpg" width="40px"><div id="lx"><i></i>您好，北京汉方本草国际中医药研究院头痛防治管理中心，<span style="color: red">解决头痛问题，找准病因对症治疗是关键。专业中医研发团队</span>，古方新创，让您不花冤枉钱，彻底解决头痛困扰。请问，您的性别是？<b style="color: red;">【点击下方选项即可】</b></div></div>'+
-					'<div class="select_botton" id="option_2">'+
-								'<div class="select_botton_item" data-ai="1" wtindex="3">男性</div>'+
-								'<div class="select_botton_item" data-ai="1" wtindex="3">女性</div>'+
+							'<div class="select_botton" id="option_2">'+
+								'<div class="select_botton_item" data-ai="1" wtindex="1">A.男性</div>'+
+								'<div class="select_botton_item" data-ai="1" wtindex="1">B.女性</div>'+
 							'</div>'+
 							'<div class="ly-clear"></div></div><div id="msg"></div>';
 
 				warr[1] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>您的年龄是？</div></div><div class="ly-clear"></div></div>';
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>您的年龄是？</div></div>'+
+							'<div class="select_botton" id="option_3">'+
+								'<div class="select_botton_item" data-ai="2" wtindex="2">A.20岁以下</div>'+
+								'<div class="select_botton_item" data-ai="2" wtindex="2">B.20-40岁</div>'+
+								'<div class="select_botton_item" data-ai="2" wtindex="2">C.40-60岁</div>'+
+								'<div class="select_botton_item" data-ai="2" wtindex="2">D.60岁以上</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div>';
 
 				warr[2] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>出现这个情况多久了？</div></div><div class="ly-clear"></div></div>';
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>您的头痛属于以下哪种情况？</div></div>'+
+							'<div class="select_botton" id="option_4">'+
+								'<div class="select_botton_item" data-ai="3" wtindex="3">A.双侧头部疼痛</div>'+
+								'<div class="select_botton_item" data-ai="3" wtindex="3">B.单侧头部疼痛</div>'+
+								'<div class="select_botton_item" data-ai="3" wtindex="3">C.其他</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div>';
 				warr[3] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>是否检查治疗过？</div></div><div class="ly-clear"></div></div>';
-
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>您的疼痛类型是？</div></div>'+
+							'<div class="select_botton" id="option_5">'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">A.胀痛</div>'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">B.闷痛</div>'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">C.针刺样痛</div>'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">D.撕裂样痛</div>'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">E.电击样痛</div>'+
+								'<div class="select_botton_item" data-ai="4" wtindex="4">F.其他</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div>';
 				warr[4] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div><p style="background:#006634;color:#fff;padding: 5px;font-size: 1.1em;">前列腺炎不仅让人饱受折磨与痛苦，丧失生活和工作激情，严重者丧失性功能甚至影响家庭。如果拖延，只会加重病情，还会导致肾炎、尿毒症等后果。选择有针对性的诊疗方案，<span style="color: red"></span>即可轻松调理！</p></div></div><div class="ly-clear"></div></div>' +
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> 这个方案科学对症，效果好，在家即可轻松调理！（长按复制加老师微信）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
-					 + '</span> 获取专属调理办法！</div></div><div class="ly-clear"></div></div>';
-				warr[8] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div><p style="background:#006634;color:#fff;padding: 5px;font-size: 1.1em;">前列腺炎不仅让人饱受折磨与痛苦，丧失生活和工作激情，严重者丧失性功能甚至影响家庭。如果拖延，只会加重病情，还会导致肾炎、尿毒症等后果。选择有针对性的诊疗方案，<span style="color: red"></span>即可轻松调理！</p></div></div><div class="ly-clear"></div></div>' +
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> 这个方案科学对症，效果好，在家即可轻松调理！（长按复制加老师微信）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
-					 + '</span> 获取合理调理办法！</div></div><div class="ly-clear"></div></div>';
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>出现这个情况多久了？</div></div>'+
+							'<div class="select_botton" id="option_5">'+
+								'<div class="select_botton_item" data-ai="5" wtindex="5">A.1年以下 </div>'+
+								'<div class="select_botton_item" data-ai="5" wtindex="5">B.1-5年</div>'+
+								'<div class="select_botton_item" data-ai="5" wtindex="5">C.5-10年</div>'+
+								'<div class="select_botton_item" data-ai="5" wtindex="5">D.10年以上</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div>';
 				warr[5] =
-					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div>添加老师微信（长按复制）<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;">' +
-					 + '</span>，免费获取专属调理办法</div></div><div class="ly-clear"></div></div>';
+					'<div class="line"><div class="left"> <img src="./images/222.jpg" width="40px"><div> <i></i>是否检查治疗过？</div></div>'+
+							'<div class="select_botton" id="option_5">'+
+								'<div class="select_botton_item" data-ai="6" wtindex="6">A.是 </div>'+
+								'<div class="select_botton_item" data-ai="6" wtindex="6">B.否</div>'+
+							'</div>'+
+							'<div class="ly-clear"></div></div>';
+				warr[6] =
+					'<div class="line">'+
+						'<div class="left"><img src="./images/222.jpg" width="40px">'+
+						'<div>您的情况我们已基本了解，长按复制添加微信<span class="copy_weixin" style="font-size: 20px;background-color: yellow;color: red;"xwy7655' +
+					 '</span>，即刻获取治疗方案！</div></div><div class="ly-clear"></div></div>';
 				setTimeout(function() {
 					$('.ly-section1 .line:first')["fadeIn"](100)
 				}, 300);
@@ -162,12 +178,12 @@
 					var wtindex = $(this).attr('wtindex');
 					var index = $(this).attr('index');
 					$("#msg").append(pj_html(p_value));
-					console.log(p_ai);
 					window.scrollTo(0, document.body.scrollHeight);
 					// 第一个答案
 					setTimeout(function() {
+						console.log(wtindex);
 						if (wtindex < (warr.length - 1)) {
-							if (wtindex == 4) {
+							if (wtindex == 6) {
 								addHtml(warr[wtindex * p_ai], 1000);
 							} else {
 								addHtml(warr[wtindex], 1000);

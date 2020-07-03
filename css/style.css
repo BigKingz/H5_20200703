@@ -22,6 +22,7 @@ a{text-decoration:none;}
 }
 /*.ly-section1{min-height:100%; margin-top:40px;}*/
 .ly-section1 .line{margin:5px 10px 0 10px;}
+.ly-section1 .line::after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .ly-section1 .left{float:left;max-width:80%;margin:10px 0 0 0;}
 .ly-section1 .left img{float:left;margin:0 5px 0 0;}
 .ly-section1 .left div{position:relative;margin:0 0 0 55px;padding:10px;background:#FFF;color:#323232; border-radius:6px;line-height: 22px;}
@@ -139,10 +140,11 @@ a{text-decoration:none;}
 }
 #cont-txt {
     border: .03rem solid #ccc;
-    margin: 13% 5%;
+    margin: 50% 5%;
     border-radius: 20px;
     background-color: #fff;
-    padding-top: 10%;
+    padding-top: 5%;
+	padding-bottom: 5%;
 }
 .txtmain {
     text-align: center;
@@ -152,16 +154,16 @@ a{text-decoration:none;}
 #closepop {
     cursor: pointer;
     color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 31px;
+    height: 31px;
     border-radius: 50%;
     position: absolute;
     top: -2%;
     right: 2%;
     border: solid 1px #ccc;
-    background-color: #06b3e3;
+    background-color: #9D5218;
     font-size: 25px;
-    line-height: 1.5em;
+    line-height: 22px;
     text-align: center;
 }
 .txtmain .txtsub {
@@ -173,7 +175,7 @@ a{text-decoration:none;}
 .txtmain p.wxh {
     margin: 5% auto;
     width: 80%;
-    background-color: #06b3e3;
+    background-color: #9D5218;
     border-radius: 10px;
     text-align: center;
     color: #fff;
@@ -188,7 +190,7 @@ a{text-decoration:none;}
 .txtmain p.gowx>span {
     padding: 8px 12px;
     font-size: 14px;
-    background: #3ab6d9;
+    background: #9D5218;
     text-align: center;
     line-height: 2em;
     color: #fff;
